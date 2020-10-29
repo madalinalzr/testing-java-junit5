@@ -1,10 +1,7 @@
 package guru.springframework.sfgpetclinic.controllers;
 
 import guru.springframework.sfgpetclinic.ControllerTest;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
 
 import java.time.Duration;
@@ -40,18 +37,20 @@ class IndexControllerTest implements ControllerTest {
         });
     }
 
+    @Disabled("Demo of timeout")
     @Test
     void testTimeout(){
         assertTimeout(Duration.ofMillis(100), () -> {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             System.out.println("I got here");
         });
     }
 
+    @Disabled("Demo of timeout")
     @Test
     void testTimeoutPrompt(){
         assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             System.out.println("I got here too!");
         });
     }
