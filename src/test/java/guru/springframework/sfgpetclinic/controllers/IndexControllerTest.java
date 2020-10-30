@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
-@Tag("model")
+@Tag("controllers")
 class IndexControllerTest implements ControllerTest {
 
     IndexController controller;
